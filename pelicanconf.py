@@ -1,6 +1,6 @@
 AUTHOR = 'Çağıl Gümüş'
 SITENAME = 'Abused Engineer'
-SITEURL = ""
+SITEURL = "https://cagil-gumus.github.io/cagil-gumus.io/"
 
 PATH = "content"
 
