@@ -28,7 +28,7 @@ CONFIG = {
     "ssh_port": "22",
     "ssh_path": "/var/www",
     # Github Pages configuration
-    "github_pages_branch": "main",
+    "github_pages_branch": "gh-pages",
     "commit_message": f"'Publish site on {datetime.date.today().isoformat()}'",
     # Host and port for `serve`
     "host": "localhost",
@@ -97,6 +97,7 @@ def preview(c):
     """Build production version of site"""
     pelican_run("-s {settings_publish}".format(**CONFIG))
 
+
 @task
 def livereload(c):
     """Automatically reload browser tab upon file modification."""
@@ -133,7 +134,8 @@ def livereload(c):
 
         webbrowser.open("http://{host}:{port}".format(**CONFIG))
 
-    server.serve(host=CONFIG["host"], port=CONFIG["port"], root=CONFIG["deploy_path"])
+    server.serve(host=CONFIG["host"],
+                 port=CONFIG["port"], root=CONFIG["deploy_path"])
 
 
 @task
@@ -148,6 +150,7 @@ def publish(c):
         )
     )
 
+
 @task
 def gh_pages(c):
     """Publish to GitHub Pages"""
@@ -157,6 +160,7 @@ def gh_pages(c):
         "-m {commit_message} "
         "{deploy_path} -p".format(**CONFIG)
     )
+
 
 def pelican_run(cmd):
     cmd += " " + program.core.remainder  # allows to pass-through args to pelican
