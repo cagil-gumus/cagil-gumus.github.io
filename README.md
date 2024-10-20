@@ -13,7 +13,7 @@ pip install ghp-import          # Makes life easier to deploy to gh-pages branch
   * `pelican content -o output -s pelicanconf.py -e RELATIVE_URLS='"True"'` to render for localhost access
 * `pelican --autoreload --listen &` to host http_server
 * `ghp-import output -b gh-pages` to upload changes to `gh-pages` branch
-* `git push origin ph-pages` to publish
+* `git push origin gh-pages` to publish
 
 
 Here is the website: https://cagil-gumus.github.io/
