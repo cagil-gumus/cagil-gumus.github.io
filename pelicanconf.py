@@ -1,6 +1,6 @@
 AUTHOR = 'Çağıl Gümüş'
-SITENAME = 'Abused Engineer'
-SITEURL = "https://cagil-gumus.github.io/cagil-gumus.io/"
+SITENAME = 'The Troubled Engineer'
+SITEURL = "https://cagil-gumus.github.io/cagil-gumus.io"
 
 PATH = "content"
 
@@ -14,6 +14,9 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+DEFAULT_CATEGORY = 'Home'
+REVERSE_CATEGORY_ORDER = True
 
 # Blogroll
 LINKS = (
