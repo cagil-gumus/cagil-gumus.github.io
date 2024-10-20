@@ -7,8 +7,6 @@ save_as: index.html
 
 Hi. 
 
-
-
 I program FPGAs for a living. 
 
 I'll try to share interesting things here.

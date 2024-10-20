@@ -8,7 +8,7 @@ import sys
 sys.path.append(os.curdir)
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = "https://cagil-gumus.github.io/cagil-gumus.io/"
+SITEURL = "https://cagil-gumus.github.io/"
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"
