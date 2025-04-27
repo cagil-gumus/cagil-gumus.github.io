@@ -14,24 +14,18 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-DEFAULT_CATEGORY = 'Home'
+# DEFAULT_CATEGORY = 'Home'
 # REVERSE_CATEGORY_ORDER = True
 
 # Blogroll
 LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
+    ("Gitlab", "https://gitlab.desy.de/cagil.guemues"),
 )
 
 # Social widget
 SOCIAL = (
-    ("Desy Gitlab Profile (Place you can see what I code in open-source world)",
-     "https://gitlab.desy.de/cagil.guemues"),
-    ("Soundcloud (Place you can hear what I do in music)",
-     "https://soundcloud.com/cagilgumus/"),
+    ("Soundcloud", "https://soundcloud.com/cagilgumus/"),
+    ("YouTube", "https://www.youtube.com/@CaglGumus"),
 )
 
 DEFAULT_PAGINATION = 10

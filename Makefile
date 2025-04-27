@@ -94,4 +94,14 @@ github: publish
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 
-.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish ssh_upload sftp_upload rsync_upload github
+.PHONY: html help clean regenerate serve serve-global devserver devserver-global publish ssh_upload sftp_upload rsync_upload github install
+VENV_NAME=.venv
+VIRTUAL_ENV=$(PWD)/${VENV_NAME}
+PYTHON=${VENV_NAME}/bin/python
+# --system-site-package is needed for mtca4u
+$(VIRTUAL_ENV):
+	python3 -m venv $(VIRTUAL_ENV) --system-site-package
+	${VIRTUAL_ENV}/bin/python -m ensurepip --upgrade
+install: clean $(VIRTUAL_ENV)
+	@echo "Setting up the Virtual Environment"
+	. $(VIRTUAL_ENV)/bin/activate && pip install -r requirements.txt
