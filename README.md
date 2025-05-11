@@ -1,10 +1,18 @@
+# Cagil Gumus Blog
+
+Currently using a forked version of `Pelican-Cid` theme. Reason: Change fonts and geometry of text etc.
+
+WARNING: Remember to upload the source changes to `main` branch! `make github` doesn't do that!
+
 ## Installation 
 
+### Using Makefile
 ```bash
-pip install "pelican[markdown]" # install the optional dependencies for Markdown
-pip install ghp-import          # Makes life easier to deploy to gh-pages branch
+make env
+make RELATIVE=1 devserver # for local development
+make publish # to generate artifacts for GitHub Pages
+make github # use ghp-import to upload changes to gh-pages
 ```
-
 ## Writing Content 
 
 * Create subfolders for the Categories and add `<blog_post>.md`.
@@ -17,7 +25,3 @@ pip install ghp-import          # Makes life easier to deploy to gh-pages branch
 
 
 Here is the website: https://cagil-gumus.github.io/
-
-## TODOs:
-
-* Don't push raw photos. Use hosting site instead. You only have 1GB of storage

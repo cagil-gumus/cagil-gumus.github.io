@@ -1,8 +1,12 @@
 AUTHOR = 'Çağıl Gümüş'
-SITENAME = 'The Troubled Engineer'
+SITENAME = 'Çağıl Gümüş Blog'
 SITEURL = "https://cagil-gumus.github.io/"
 
 PATH = "content"
+
+THEME = 'themes/Pelican-Cid'
+
+STATIC_PATHS = ['images', 'cv']
 
 TIMEZONE = 'Europe/Berlin'
 
@@ -14,21 +18,12 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-# DEFAULT_CATEGORY = 'Home'
-# REVERSE_CATEGORY_ORDER = True
-
-# Blogroll
-LINKS = (
-    ("Gitlab", "https://gitlab.desy.de/cagil.guemues"),
-)
-
-# Social widget
-SOCIAL = (
-    ("Soundcloud", "https://soundcloud.com/cagilgumus/"),
-    ("YouTube", "https://www.youtube.com/@CaglGumus"),
-)
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+USE_CUSTOM_MENU = True
+CUSTOM_MENUITEMS = (('About Me', 'pages/about'),)
+CONTACTS = (("DESY-GitLab", "https://gitlab.desy.de/cagil.guemues"),
+            ("GitHub", "https://github.com/cagil-gumus"),
+            ("YouTube", "https://www.youtube.com/@CaglGumus"),
+            ("SoundCloud", "https://soundcloud.com/cagilgumus"))
