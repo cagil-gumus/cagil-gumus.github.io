@@ -27,3 +27,5 @@ CONTACTS = (("DESY-GitLab", "https://gitlab.desy.de/cagil.guemues"),
             ("GitHub", "https://github.com/cagil-gumus"),
             ("YouTube", "https://www.youtube.com/@CaglGumus"),
             ("SoundCloud", "https://soundcloud.com/cagilgumus"))
+
+STATIC_PATHS = ['images', 'cv', 'FPGA/images']
