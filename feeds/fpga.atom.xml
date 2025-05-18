@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Çağıl Gümüş Blog - FPGA</title><link href="https://cagil-gumus.github.io/" rel="alternate"></link><link href="https://cagil-gumus.github.io/feeds/fpga.atom.xml" rel="self"></link><id>https://cagil-gumus.github.io/</id><updated>2025-04-27T00:00:00+02:00</updated><entry><title>How to do science with FPGAs.</title><link href="https://cagil-gumus.github.io/how-to-fpga-science.html" rel="alternate"></link><published>2025-04-27T00:00:00+02:00</published><updated>2025-04-27T00:00:00+02:00</updated><author><name>Çağıl Gümüş</name></author><id>tag:cagil-gumus.github.io,2025-04-27:/how-to-fpga-science.html</id><summary type="html">&lt;p&gt;Talking about how FPGAs are used inside experimental physics projects.&lt;/p&gt;</summary><content type="html">&lt;!-- Humanity has been accelerating a charged particle is happening since a very long time.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Çağıl Gümüş Blog - FPGA</title><link href="https://cagil-gumus.github.io/" rel="alternate"></link><link href="https://cagil-gumus.github.io/feeds/fpga.atom.xml" rel="self"></link><id>https://cagil-gumus.github.io/</id><updated>2025-05-25T00:00:00+02:00</updated><entry><title>FWK - Open Source FPGA Framework</title><link href="https://cagil-gumus.github.io/fwk.html" rel="alternate"></link><published>2025-05-25T00:00:00+02:00</published><updated>2025-05-25T00:00:00+02:00</updated><author><name>Çağıl Gümüş</name></author><id>tag:cagil-gumus.github.io,2025-05-25:/fwk.html</id><summary type="html">&lt;p&gt;FWK is an open-source FPGA development framework that I've worked on. But why?&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Ambitions&lt;/h2&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/iDwlSPno13k?si=ib2jf_GGN-mdkc20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 
-You can do many cool things with an accelerated, properly shaped particle beams. You can:
-
-* mash them together, 
-* literally target them to your skull so it deposits its energy on top of the cancerious cells 
-* bombard the nuclear power plant waste with it and reduce its decay half-time 
-* wiggle them and turn them into a photon particles! 
-
-Where I work, we tend to convert them into a very bright, and very coherent light sources. Scientist then takes these photons and do experiment with it. I have zero clue about what's happening on the other side. At work, I usually focus my attention that this photon light is proper and arrives to its destination (what we call usually experiment hutches) correctly.
-
-Now, it's pretty obviously FPGAs are all over the place here. It's fantastic platform for people to write code that can react in nano seconds. It's used as fast-feedback systems, data acquisition systems, machine/personel protection, and so on. However, Let's pick one and talk about it: 
-
-FPGA Based Low-Level RF Controller 
-
-The acceleration of any charged particle is usually achieved with High Power Radio Frequency waves. These waves are driven into a superconducting cavity. These cavities shaped in a that only one fundamental frequency (and it's harmanics) can be excited. 
-
-The role of the FPGAs are the keep these RF waves stable in amplitude and phase. In order to achieve this, FPGA needs to do two things: 
-
-* Understand what's happening inside the cavity 
-* Influence what's inside the cavity 
-
-So basically, close a feedback loop. The analog RF signal has to be digitized with an ADC  --&gt;</content><category term="FPGA"></category></entry></feed>
+&lt;p&gt;I gave a talk at the &lt;a href="https://mtcaws.desy.de/"&gt;13&lt;sup&gt;th&lt;/sup&gt; MicroTCA Workshop&lt;/a&gt; at Hamburg/Germany about &lt;a href="https://gitlab.desy.de/fpgafw/fwk"&gt;FWK&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In that talk, I went into considerable detail about why and how we developed this EDA abstraction tool.&lt;/p&gt;
+&lt;p&gt;Due to time limitations, I couldn't dedicate much attention to the 'Why' behind creating such a tool. So now, with my own (useless) blog, I can explain further:&lt;/p&gt;
+&lt;p&gt;FWK is born due to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FPGA development is hard. &lt;/li&gt;
+&lt;li&gt;Scientific research is harder. &lt;/li&gt;
+&lt;li&gt;FPGA development in scientific research could be a nightmare. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DESY had accumulated nearly a million lines of VHDL code, along with approximately 30,000 lines of Tcl (I sincerely dislike Tcl, and I'm prepared to debate it). This code, developed in-house over time, addressed a multitude of problems. It resided in a single SVN repository with thousands of commits and, predictably, lacked proper documentation and suffered from a rigid structure.&lt;/p&gt;
+&lt;p&gt;However, in 2020, the team I was part of decided to take this existing framework, rewrite it entirely from scratch, and release it publicly under an open-source license.&lt;/p&gt;
+&lt;p&gt;It was a bold move.&lt;/p&gt;
+&lt;h2&gt;Yet another tool&lt;/h2&gt;
+&lt;p&gt;There's one statement I made during the talk that might seem hypocritical:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"... stop people re-inventing wheels.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is rather funny because FWK is indeed re-inventing a tool. EDA Abstraction tool to be precise.&lt;br&gt;
+There are already other projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/olofk/fusesoc"&gt;FuseSoC&lt;/a&gt; + &lt;a href="https://github.com/olofk/edalize"&gt;edalize&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/PyFPGA/pyfpga"&gt;pyfpga&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ohwr.org/projects/hdl-make/"&gt;hdlmake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Is FWK actually better than those tools? I don't think so. However, what our community (Experimental-Physics) often needs is not the &lt;em&gt;perfect&lt;/em&gt; solution, but a solution that is available and useable. &lt;/p&gt;
+&lt;p&gt;FWK is indeed useful. We have seen its adoption at several European facilities, such as HZDR (Dresden, Germany), HZB (Berlin, Germany), and CERN (Geneva, Switzerland). If you are working with MicroTCA hardware, we offer the &lt;strong&gt;only&lt;/strong&gt; open-source solution currently available.
+There are now over 10 active contributors to this repository and it is growing.&lt;/p&gt;
+&lt;h2&gt;The future&lt;/h2&gt;
+&lt;p&gt;FWK will change. Most probably drop it's tcl backend and replace it with Python. It also lack package manager capabilities. 
+Maybe it will &lt;strong&gt;fuse&lt;/strong&gt; with FuseSoc? Who knows?&lt;/p&gt;
+&lt;p&gt;You can now ask latest AI-overlord models about our tools like FWK and get decent answers on what exactly is FWK.&lt;/p&gt;
+&lt;p&gt;Making our tools open-source has enabled this. Our name is on the map. &lt;/p&gt;
+&lt;p&gt;FWK is enabling science and that's what matters at the end.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://cagil-gumus.github.io/FPGA/images/fwk_logo_org.svg" width="350"&gt;&lt;/p&gt;</content><category term="FPGA"></category></entry></feed>

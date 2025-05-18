@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>    FWK - Open Source FPGA Framework
+</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Merriweather:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cagil-gumus.github.io/theme/css/cid.css">
+        <link href="https://cagil-gumus.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Çağıl Gümüş Blog Atom Feed" />
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="container">
+
+<header class="blog-header">
+    <h1><a href="https://cagil-gumus.github.io">Çağıl Gümüş Blog</a></h1>
+    <p></p>
+    <nav>
+        <a href="https://cagil-gumus.github.io/">INDEX</a>
+        <a href="https://cagil-gumus.github.io/archives">ARCHIVES</a>
+        <a href="https://cagil-gumus.github.io/categories">CATEGORIES</a>
+    </nav>
+</header>
+
+    <div class="post">
+
+        <header>
+            <h1>FWK - Open Source FPGA Framework</h1>
+            <p class="date">Written on <time datetime="2025-05-25T00:00:00+02:00">May 25, 2025</time></p>
+        </header>
+
+        <article>
+            <h2>Ambitions</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iDwlSPno13k?si=ib2jf_GGN-mdkc20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>I gave a talk at the <a href="https://mtcaws.desy.de/">13<sup>th</sup> MicroTCA Workshop</a> at Hamburg/Germany about <a href="https://gitlab.desy.de/fpgafw/fwk">FWK</a>.</p>
+<p>In that talk, I went into considerable detail about why and how we developed this EDA abstraction tool.</p>
+<p>Due to time limitations, I couldn't dedicate much attention to the 'Why' behind creating such a tool. So now, with my own (useless) blog, I can explain further:</p>
+<p>FWK is born due to:</p>
+<ul>
+<li>FPGA development is hard. </li>
+<li>Scientific research is harder. </li>
+<li>FPGA development in scientific research could be a nightmare. </li>
+</ul>
+<p>DESY had accumulated nearly a million lines of VHDL code, along with approximately 30,000 lines of Tcl (I sincerely dislike Tcl, and I'm prepared to debate it). This code, developed in-house over time, addressed a multitude of problems. It resided in a single SVN repository with thousands of commits and, predictably, lacked proper documentation and suffered from a rigid structure.</p>
+<p>However, in 2020, the team I was part of decided to take this existing framework, rewrite it entirely from scratch, and release it publicly under an open-source license.</p>
+<p>It was a bold move.</p>
+<h2>Yet another tool</h2>
+<p>There's one statement I made during the talk that might seem hypocritical:</p>
+<blockquote>
+<p>"... stop people re-inventing wheels.</p>
+</blockquote>
+<p>This is rather funny because FWK is indeed re-inventing a tool. EDA Abstraction tool to be precise.<br>
+There are already other projects:</p>
+<ul>
+<li><a href="https://github.com/olofk/fusesoc">FuseSoC</a> + <a href="https://github.com/olofk/edalize">edalize</a></li>
+<li><a href="https://github.com/PyFPGA/pyfpga">pyfpga</a></li>
+<li><a href="https://ohwr.org/projects/hdl-make/">hdlmake</a></li>
+</ul>
+<p>Is FWK actually better than those tools? I don't think so. However, what our community (Experimental-Physics) often needs is not the <em>perfect</em> solution, but a solution that is available and useable. </p>
+<p>FWK is indeed useful. We have seen its adoption at several European facilities, such as HZDR (Dresden, Germany), HZB (Berlin, Germany), and CERN (Geneva, Switzerland). If you are working with MicroTCA hardware, we offer the <strong>only</strong> open-source solution currently available.
+There are now over 10 active contributors to this repository and it is growing.</p>
+<h2>The future</h2>
+<p>FWK will change. Most probably drop it's tcl backend and replace it with Python. It also lack package manager capabilities. 
+Maybe it will <strong>fuse</strong> with FuseSoc? Who knows?</p>
+<p>You can now ask latest AI-overlord models about our tools like FWK and get decent answers on what exactly is FWK.</p>
+<p>Making our tools open-source has enabled this. Our name is on the map. </p>
+<p>FWK is enabling science and that's what matters at the end.</p>
+<p><img src="https://cagil-gumus.github.io/FPGA/images/fwk_logo_org.svg" width="350"></p>
+        </article>
+
+        <footer>
+            <p>This entry is posted in <a href="https://cagil-gumus.github.io/category/fpga.html">FPGA</a>.</p>
+        </footer>
+
+
+    </div>
+
+
+<footer class="blog-footer">
+
+    <ul class="nav">
+                <li><a href="https://cagil-gumus.github.io/pages/about">About Me</a></li>
+            <li><a href="https://gitlab.desy.de/cagil.guemues">Desy-gitlab</a></li>
+            <li><a href="https://github.com/cagil-gumus">Github</a></li>
+            <li><a href="https://www.youtube.com/@CaglGumus">Youtube</a></li>
+            <li><a href="https://soundcloud.com/cagilgumus">Soundcloud</a></li>
+    </ul>
+
+    <p class="disclaimer">
+    Built with <a href="http://getpelican.com">Pelican</a>, and <a href="https://github.com/hdra/Pelican-Cid">Cid</a> theme.
+    </p>
+</footer>
+            </div>
+    </body>
+</html>
