@@ -1,8 +1,11 @@
 Title: FWK - Open Source FPGA Framework
 Date: 2025-05-25
 Category: FPGA
+Tags: FPGA
 Slug: fwk
+Authors: Cagil Gumus
 Summary: FWK is an open-source FPGA development framework that I've worked on. But why?
+
 ## Ambitions
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iDwlSPno13k?si=ib2jf_GGN-mdkc20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -29,7 +32,7 @@ It was a bold move.
 
 There's one statement I made during the talk that might seem hypocritical:
 
-> "... stop people re-inventing wheels.
+> ... to avoid reinventing the wheel ...
 
 This is rather funny because FWK is indeed re-inventing a tool. EDA Abstraction tool to be precise.  
 There are already other projects:

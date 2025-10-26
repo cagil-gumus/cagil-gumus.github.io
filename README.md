@@ -8,20 +8,16 @@ WARNING: Remember to upload the source changes to `main` branch! `make github` d
 
 ### Using Makefile
 ```bash
+# Checkout Pelican-Cid git submodule as the main theme
+git submodule update --init --recursive
 make env
 make RELATIVE=1 devserver # for local development
 make publish # to generate artifacts for GitHub Pages
 make github # use ghp-import to upload changes to gh-pages
 ```
-## Writing Content 
 
-* Create subfolders for the Categories and add `<blog_post>.md`.
-* Render the HTML
-  * `pelican content -o output -s pelicanconf.py`  w/ GitHub Pages URL
-  * `pelican content -o output -s pelicanconf.py -e RELATIVE_URLS='"True"'` to render for localhost access
-* `pelican --autoreload --listen &` to host http_server
-* `ghp-import output -b gh-pages` to upload changes to `gh-pages` branch
-* `git push origin gh-pages` to publish
+## Tips and Tricks 
 
+* use `Status: draft` to mark posts that are not ready
 
 Here is the website: https://cagil-gumus.github.io/
